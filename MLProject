@@ -1,0 +1,19 @@
+name: UnlearnSPN
+
+entry_points:
+  main:
+    parameters:
+      seed: float
+      remove: float
+      dataset: string
+      epsilon: float
+
+    command: "python run_experiments.py -s {seed} -r {remove} -d {dataset} -e {epsilon}"
+
+  training:
+    parameters:
+      seed: float
+      dataset: string
+      epsilon: float
+
+    command: "python run_training_comparison.py -s {seed} -d {dataset} -e {epsilon}"
